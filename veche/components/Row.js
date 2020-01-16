@@ -3,7 +3,6 @@ import {
   StyleSheet,
   View,
   Text,
-  Button,
   TouchableOpacity,
   Image,
 } from 'react-native';
@@ -19,7 +18,7 @@ const Row = props => (
         <View style={styles.contData1}>
           <Image
             style={{ width: 50, height: 50}}
-            source={require('./src/golova.png')}
+            source={require('../src/golova.png')}
           />
         </View>
         <View style={styles.contData2}>
@@ -35,7 +34,7 @@ const Row = props => (
         <View style={styles.rate}>
           <Image
             style={{ width: 93, height: 18}}
-            source={require('./src/stars.png')}
+            source={require('../src/stars.png')}
           />
         </View>
         <View sty le={styles.rate}>
@@ -48,7 +47,7 @@ const Row = props => (
       <View style={styles.connect1}>
         <Image
           style={{ width: 30, height: 30}}
-          source={require('./src/teg.png')}
+          source={require('../src/teg.png')}
         />
         <Text> {props.conTegs}</Text>
         <View style={styles.separator2} />
@@ -56,7 +55,7 @@ const Row = props => (
       <View style={styles.connect2}>
         <Image
           style={{ width: 30, height: 30}}
-          source={require('./src/action.png')}
+          source={require('../src/action.png')}
         />
         <Text> {props.conActions}</Text>
       </View>

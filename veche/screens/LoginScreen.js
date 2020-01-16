@@ -7,12 +7,11 @@ import {
   Button,
   KeyboardAvoidingView,
   TextInput,
-  StatusBar,
 } from 'react-native';
 import {connect} from 'react-redux';
 
 import {logInUser} from '../redux/actions'
-
+import Colors from '../constants/Colors';
 
 export default class LoginScreen extends React.Component {
   state = {
@@ -70,7 +69,7 @@ export default class LoginScreen extends React.Component {
                 />
               </View>
               <Button title="Submit" onPress={() => this.props.navigation.navigate('Contacts')}
-              style={styles.button1} color="#464646"/>
+              style={styles.button1} color={Colors.button} />
             </View>
           </KeyboardAvoidingView>
   );
@@ -85,14 +84,14 @@ const styles = StyleSheet.create({
 	},
   container2: {
     fontSize: 28,
-    color: '#fdfebf',
+    color: Colors.tint,
     fontWeight: 'bold',
-    backgroundColor: '#2b2826',
+    backgroundColor: Colors.background,
     alignItems: 'center',
 
   },
   container3: {
-    backgroundColor: '#2b2826',
+    backgroundColor: Colors.background,
     justifyContent: 'center',
     padding: 20,
   },
@@ -106,14 +105,13 @@ const styles = StyleSheet.create({
 		paddingVertical: 5,
     padding: 10,
 		borderRadius: 30,
-    backgroundColor: '#fdfebf',
+    backgroundColor: Colors.tint,
 	},
   scrollView: {
     backgroundColor: 'black',
   },
   button1: {              // надо посмотреть как работает style для кнопки
     borderRadius: 30,
-    backgroundColor: 'black',
   },
 })
 

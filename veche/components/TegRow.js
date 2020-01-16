@@ -4,7 +4,6 @@ import {
   StyleSheet,
   View,
   Text,
-  Button,
   TouchableOpacity,
   Image,
 } from 'react-native';
@@ -21,7 +20,7 @@ const TegRow = props => (
         <View style={styles.contData1}>
           <Image
             style={{ width: 50, height: 50}}
-            source={require('./src/teg.png')}
+            source={require('../src/teg.png')}
           />
         </View>
         <View style={styles.contData2}>
@@ -45,14 +44,14 @@ const TegRow = props => (
       <View style={styles.connect1}>
         <Image
           style={{ width: 30, height: 30}}
-          source={require('./src/golova.png')}
+          source={require('../src/golova.png')}
         />
         <Text> {props.conTegs}</Text>
       </View>
       <View style={styles.connect2}>
         <Image
           style={{ width: 30, height: 30}}
-          source={require('./src/action.png')}
+          source={require('../src/action.png')}
         />
         <Text> {props.conActions}</Text>
       </View>

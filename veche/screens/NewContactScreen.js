@@ -3,7 +3,7 @@ import {Button, KeyboardAvoidingView, StyleSheet, TextInput, Text, View} from  '
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
-import AddContactForm from '../AddContactForm';
+import AddContactForm from '../components/AddContactForm';
 import {addContact} from '../redux/actions';
 
 

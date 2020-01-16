@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import {connect} from 'react-redux';
 
-import ContactsList from '../ContactsList'
+import ContactsList from '../components/ContactsList'
 
 class ContactScreen extends React.Component {
   static navigationOptions = {

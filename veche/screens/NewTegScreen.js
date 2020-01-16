@@ -3,7 +3,7 @@ import {Button, KeyboardAvoidingView, StyleSheet, TextInput, Text, View} from  '
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
-import AddTegForm from '../AddTegForm';
+import AddTegForm from '../components/AddTegForm';
 import {addTeg} from '../redux/actions';
 
 

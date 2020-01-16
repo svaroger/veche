@@ -3,7 +3,7 @@ import {Button, KeyboardAvoidingView, StyleSheet, TextInput, Text, View} from  '
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 
-import AddActionForm from '../AddActionForm';
+import AddActionForm from '../components/AddActionForm';
 import {addAction} from '../redux/actions';
 
 

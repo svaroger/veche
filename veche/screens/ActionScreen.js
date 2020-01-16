@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import {connect} from 'react-redux';
 
-import ActionsList from '../ActionsList'
+import ActionsList from '../components/ActionsList'
 
 class ActionScreen extends React.Component {
   static navigationOptions = {

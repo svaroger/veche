@@ -28,7 +28,7 @@ export default class AddContactForm extends React.Component {
   state = {
   		name: '',
   		phone: '',
-			picture: './src/golova.png',
+			picture: '../src/golova.png',
 			persRate: '',
 			profRate: '',
 			conTegs: '',

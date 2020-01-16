@@ -7,26 +7,6 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  SectionList,
-  View,
-  Text,
-  StatusBar,
-  Button,
-  FlatList,
-  TextInput,
-  KeyboardAvoidingView,
-} from 'react-native';
-
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
@@ -44,7 +24,7 @@ import ContactDetailsScreen from './screens/ContactDetailsScreen';
 import {fetchUsers} from './api';
 import contacts, {compareNames} from './contacts';
 import store from './redux/store'
-
+import Colors from './constants/Colors';
 
 const MenuScreen = createMaterialTopTabNavigator(
     {
@@ -56,13 +36,13 @@ const MenuScreen = createMaterialTopTabNavigator(
       initialRouteName: 'Contacts',
       navigationOptions: {
         headerTitle: 'SMOLA',
-        headerTintColor: '#fdfebf',
+        headerTintColor: Colors.tint,
         headerTitleStyle: {
           fontSize: 20,
           fontWeight: 'bold',
 	      },
         headerStyle: {
-          backgroundColor: '#2b2826',
+          backgroundColor: Colors.background,
         },
       },
       tabBarOptions: {
@@ -71,9 +51,9 @@ const MenuScreen = createMaterialTopTabNavigator(
           fontWeight: 'bold',
         },
         style: {
-          backgroundColor: '#2b2826',
+          backgroundColor: Colors.background,
         },
-        activeTintColor: '#fdfebf',
+        activeTintColor: Colors.tint,
         inactiveTintColor: 'gray',
       },
     }
@@ -106,6 +86,7 @@ const AppContainer = createAppContainer(MainNavigator);
 
 export default class App extends React.Component {
 
+/*
   state = {
     contacts: contacts,
   }
@@ -118,7 +99,7 @@ getUsers = async () => {
   const results = await fetchUsers()
   this.setState({contacts: results})
 }
-
+*/
 
   render() {
       return   (
@@ -129,52 +110,3 @@ getUsers = async () => {
       )
 }
 }
-
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-  input: {
-  		borderWidth: 1,
-  		borderColor: 'black',
-  		minWidth: 100,
-  		marginTop: 20,
-  		marginHorizontal: 20,
-  		paddingHorizontal: 10,
-  		paddingVertical: 5,
-  		borderRadius: 3,
-  	},
-});

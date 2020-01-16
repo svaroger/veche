@@ -7,7 +7,7 @@ import {
 } from 'react-native';
 import {connect} from 'react-redux';
 
-import TegsList from '../TegsList'
+import TegsList from '../components/TegsList'
 
 class TegScreen extends React.Component {
   static navigationOptions = {
