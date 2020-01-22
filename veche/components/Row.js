@@ -2,39 +2,38 @@ import React from 'react';
 import {
   StyleSheet,
   View,
-  Text,
   TouchableOpacity,
   Image,
 } from 'react-native';
 import PropTypes from 'prop-types';
+import {ListItem, Text, Rating} from 'react-native-elements';
+
+const { rating } = 3;       // this.props. create data
 
 const Row = props => (
   <TouchableOpacity
-  style={styles.row}
   onPress={() => {props.onSelectContact(props)
   }}>
+    <View  style={styles.row}>
     <View style={styles.contBox1}>
       <View style={styles.upLine}>
-        <View style={styles.contData1}>
-          <Image
-            style={{ width: 50, height: 50}}
-            source={require('../src/golova.png')}
-          />
-        </View>
         <View style={styles.contData2}>
-          <View style={styles.contData3}>
-            <Text style={styles.nameText}>{props.name}</Text>
-          </View>
-          <View style={styles.contData4}>
-            <Text></Text>
-          </View>
+        <ListItem
+          title={props.name}
+          subtitle={props.phone}
+          leftAvatar={{ source: require('../src/golova.png')}}
+          bottomDivider
+          chevron
+        />
         </View>
       </View>
       <View style={styles.downLine}>
         <View style={styles.rate}>
-          <Image
-            style={{ width: 93, height: 18}}
-            source={require('../src/stars.png')}
+          <Rating
+            imageSize={20}
+            readonly
+            startingValue={rating}
+            style={styles.rating}
           />
         </View>
         <View sty le={styles.rate}>
@@ -60,6 +59,7 @@ const Row = props => (
         <Text> {props.conActions}</Text>
       </View>
     </View>
+    </View>
   </TouchableOpacity>
 )
 
@@ -69,7 +69,7 @@ Row.propTypes = {
 }
 
 const styles = StyleSheet.create({
-    row: {
+  row: {
       flex: 1,
       flexDirection: 	'row',
   },
