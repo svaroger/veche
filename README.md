@@ -1,2 +1,3 @@
 # veche
-Blockchain ID App
+Blockchain ID client app for Sovrin project. 
+Alpha version.
